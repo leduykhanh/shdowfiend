@@ -1,0 +1,57 @@
+{
+com.badlogic.gdx.graphics.g2d.BitmapFont: { default-font: { file: default.fnt } },
+com.badlogic.gdx.graphics.Color: {
+	green: { a: 1, b: 0, g: 1, r: 0 },
+	white: { a: 1, b: 1, g: 1, r: 1 },
+	red: { a: 1, b: 0, g: 0, r: 1 },
+	black: { a: 1, b: 0, g: 0, r: 0 }
+},
+com.badlogic.gdx.scenes.scene2d.ui.Skin$TintedDrawable: {
+    dialogDim: { name: table, color: { r: 0, g: 0, b: 0, a: 0.45 } }
+},
+com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle: {
+	default: { down: button_down, up: button_up },
+	toggle: { down: button_down, checked: button_down, up: button_up }
+},
+com.badlogic.gdx.scenes.scene2d.ui.Table: {
+	default: { background: table}
+},
+com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
+	default: { down: button_down, up: button_up, font: default-font, fontColor: white },
+	exit: { down: button_down, up: exit, font: default-font, fontColor: white },
+	ai: { down: button_down, up: AI, font: default-font, fontColor: white },
+	settings: { down: button_down, up: settings, font: default-font, fontColor: white },
+	medal2: { down: button_down, up: medal2, font: default-font, fontColor: white },
+	adremove: { down: button_down, up: adsremove, font: default-font, fontColor: white },
+	restart: { down: button_down, up: restart, font: default-font, fontColor: white },
+	leaderboard: { down: button_down, up: leaderboard, font: default-font, fontColor: white },
+	buy: { down: button_down, up: buy, font: default-font, fontColor: white },
+	donate: { down: button_down, up: donate, font: default-font, fontColor: white },
+	rate: { down: button_down, up: rate, font: default-font, fontColor: white },
+	ok: { down: button_down, up: ok, font: default-font, fontColor: white },
+  	online: { down: button_down, up: online, font: default-font, fontColor: white },
+  	wins: { down: button_down, up: wins, font: default-font, fontColor: white },
+	facebook: { down: button_down, up: facebook, font: default-font, fontColor: white },
+	toggle: { down: button_down, up: button_up, checked: button_down, font: default-font, fontColor: white, downFontColor: red }
+},
+com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle: {
+	default: { vScroll: button_up, hScrollKnob: button_up, background: button_up, hScroll: button_up, vScrollKnob: button_up }
+},
+com.badlogic.gdx.scenes.scene2d.ui.SelectBox$SelectBoxStyle: {
+	default: {
+		font: default-font, fontColor: white, background: select,
+		scrollStyle: default,
+		listStyle: { font: default-font, selection: button_up }
+	}
+},
+com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+	default: { font: default-font, fontColor: white }
+},
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+	default: { selection: button_up, background: button_up, font: default-font, fontColor: white, cursor: cursor }
+},
+com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
+    default: { titleFont: default-font, background: table, titleFontColor: white },
+    dialog: { titleFont: default-font, background: table, titleFontColor: white, stageBackground: dialogDim }
+}
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="16" tilewidth="32" tileheight="32" nextobjectid="37">
+ <tileset firstgid="1" name="brick" tilewidth="32" tileheight="32">
+  <image source="gach1.png" width="148" height="144"/>
+ </tileset>
+ <tileset firstgid="17" name="grass" tilewidth="32" tileheight="32">
+  <image source="grass.jpg" width="273" height="185"/>
+ </tileset>
+ <tileset firstgid="57" name="tree" tilewidth="32" tileheight="32">
+  <image source="tree.png" width="32" height="32"/>
+ </tileset>
+ <layer name="BG" width="50" height="16">
+  <data encoding="base64" compression="zlib">
+   eJwTZGBgEBzFo3gUjygsggWjyw+0G8nFwoPADaN4FA8kFiaAB9p9xGJs5RQ+jKxvoN0+ikfxKMaPARdiNWw=
+  </data>
+ </layer>
+ <layer name="bounder" width="50" height="16">
+  <data encoding="base64" compression="zlib">
+   eJztlsEKACAIQ9X//+guBSIqEUQaezAiuwxpIhMRT2k4qFeHHUX1TAD8yPrfok5Rd/veNQ+dvYNeyGsDBpvdXek5UAWvt5k/ZB5knOQCe+I9BmfmAF0=
+  </data>
+ </layer>
+ <objectgroup name="tree">
+  <object id="24" name="tre1" gid="57" x="435" y="390" width="32" height="32"/>
+  <object id="25" name="tre2" gid="57" x="271" y="348" width="32" height="32"/>
+  <object id="32" gid="57" x="690" y="364" width="32" height="32"/>
+  <object id="33" gid="57" x="339" y="208" width="32" height="32"/>
+  <object id="34" gid="57" x="308" y="230" width="32" height="32"/>
+  <object id="35" gid="57" x="271" y="185" width="32" height="32"/>
+  <object id="36" gid="57" x="438" y="183" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup name="tower">
+  <object id="28" gid="57" x="480" y="209" width="32" height="32"/>
+  <object id="29" gid="57" x="605" y="368" width="32" height="32"/>
+  <object id="30" gid="57" x="624" y="366" width="32" height="32"/>
+  <object id="31" gid="57" x="636" y="368" width="32" height="32"/>
+ </objectgroup>
+</map>

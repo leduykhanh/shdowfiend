@@ -1,0 +1,173 @@
+
+uiskin.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+table
+  rotate: false
+  xy: 1, 55
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+default
+  rotate: false
+  xy: 203, 127
+  size: 256, 128
+  orig: 256, 128
+  offset: 0, 0
+  index: -1
+like
+  rotate: false
+  xy: 1, 1
+  size: 50, 52
+  orig: 50, 52
+  offset: 0, 0
+  index: -1
+donate
+  rotate: false
+  xy: 203, 75
+  size: 100, 50
+  orig: 100, 50
+  offset: 0, 0
+  index: -1
+cursor
+  rotate: false
+  xy: 461, 193
+  size: 58, 62
+  orig: 58, 62
+  offset: 0, 0
+  index: -1
+adsremove
+  rotate: false
+  xy: 53, 3
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+AI
+  rotate: false
+  xy: 305, 75
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+button_down
+  rotate: false
+  xy: 461, 141
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+button_up
+  rotate: false
+  xy: 521, 205
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+buy
+  rotate: false
+  xy: 105, 3
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+exit
+  rotate: false
+  xy: 357, 75
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+facebook
+  rotate: false
+  xy: 573, 205
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+leaderboard
+  rotate: false
+  xy: 409, 75
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+medal2
+  rotate: false
+  xy: 461, 89
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+next
+  rotate: false
+  xy: 625, 205
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+ok
+  rotate: false
+  xy: 677, 205
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+online
+  rotate: false
+  xy: 729, 205
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+pause
+  rotate: false
+  xy: 781, 205
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+play
+  rotate: false
+  xy: 833, 205
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+rate
+  rotate: false
+  xy: 885, 205
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+restart
+  rotate: false
+  xy: 937, 205
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+select
+  rotate: false
+  xy: 157, 3
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+settings
+  rotate: false
+  xy: 209, 23
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+wins
+  rotate: false
+  xy: 261, 23
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
