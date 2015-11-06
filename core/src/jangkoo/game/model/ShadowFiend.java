@@ -29,11 +29,12 @@ public class ShadowFiend extends BaseActor {
 		super.update(delta);
 	}
 	public void setXy(float x,float y){
-		v2Position = new Vector2(x,y);
+		v2Position.x = x;
+		v2Position.y = y;
 	}
 	public void setXy_target(float x,float y){
-		this.x_target = x;
-		this.y_target = y;
+		v2Target.x = x;
+		v2Target.y = y;
 		setVelocity(x,y);
 		Vector2 tempV = new Vector2((float)(x - this.v2Position.x),(float)(y - this.v2Position.y));
 		angle = tempV.angle();
@@ -57,18 +58,7 @@ public class ShadowFiend extends BaseActor {
 	public void setSpeed(float speed) {
 		this.speed = speed;
 	}
-	public double getY_target() {
-		return y_target;
-	}
-	public void setY_target(float y_target) {
-		this.y_target = y_target;
-	}
-	public double getX_target() {
-		return x_target;
-	}
-	public void setX_target(float x_target) {
-		this.x_target = x_target;
-	}
+
 	public void setVelocity (float toX, float toY) {
 
 		// The .set() is setting the distance from the starting position to end position

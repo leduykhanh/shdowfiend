@@ -189,7 +189,6 @@ public class Controller implements Disposable {
 			else {
 				if(shadowfiend.v2Position.dst(hero.v2Position)<300)
 				{	
-					//System.out.println(shadowfiend.v2Position.dst(hero.v2Position));
 					hero.setXy_target(shadowfiend.v2Position.x,shadowfiend.v2Position.y);
 					Hit hit = new Hit(hero.v2Position.x,hero.v2Position.y,shadowfiend.v2Position.x,shadowfiend.v2Position.y);
 					if(hero.hits.size()<2)
@@ -308,7 +307,7 @@ public class Controller implements Disposable {
 //			System.out.println(tile.x +"," + tile.y+","+shadowfiend.boundingCircle.x +","+ shadowfiend.boundingCircle.y);
 			if (Intersector.overlaps(shadowfiend.boundingCircle,tile))
 				shadowfiend.isMoving = false;
-				shadowfiend.setXy_target(shadowfiend.v2Position.x-10,shadowfiend.v2Position.y-10);
+				shadowfiend.setXy_target(shadowfiend.v2Previous.x,shadowfiend.v2Previous.y);
 				break;
 		}
 	}

@@ -24,10 +24,10 @@ public class Creep extends BaseActor{
 		return damage;
 	}
 	public void update(float delta){
-		if(x_target==1 && y_target == 1)
+		if(v2Target.x==1 && v2Target.y == 1)
 			v2Position.x = v2Position.x - HERO_VELOCITY*delta;
 		else {
-			if(v2Position.dst(x_target, y_target)>10){
+			if(v2Position.dst(v2Target)>10){
 				v2Position.add (v2Velocity);
 				isMoving = true;
 			}
@@ -48,8 +48,7 @@ public class Creep extends BaseActor{
 		this.angle = angle;
 	}
 	public void setXy_target(float x,float y){
-		this.x_target = x;
-		this.y_target = y;
+		v2Target = new Vector2(x,y);
 		setVelocity(x,y);
 		Vector2 tempV = new Vector2((float)(x - this.v2Position.x),(float)(y - this.v2Position.y));
 		angle = tempV.angle();

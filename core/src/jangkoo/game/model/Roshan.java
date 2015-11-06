@@ -11,7 +11,7 @@ public class Roshan extends Creep{
 		// TODO Auto-generated constructor stub
 	}
 	public void update(float delta){
-		if(x_target==1 && y_target == 1 && v2Position.x >100 )
+		if(v2Target.x==1 && v2Target.y == 1 && v2Position.x >100 )
 			v2Position.x = v2Position.x - HERO_VELOCITY*delta;
 		else {
 			super.update(delta);
