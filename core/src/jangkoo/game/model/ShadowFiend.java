@@ -36,9 +36,10 @@ public class ShadowFiend extends BaseActor {
 		v2Target.x = x;
 		v2Target.y = y;
 		setVelocity(x,y);
-		Vector2 tempV = new Vector2((float)(x - this.v2Position.x),(float)(y - this.v2Position.y));
-		angle = tempV.angle();
-		
+		if(x!=v2Previous.x && y!=v2Previous.y){
+			Vector2 tempV = new Vector2((float)(x - this.v2Position.x),(float)(y - this.v2Position.y));
+			angle = tempV.angle();
+		}
 	}
 	public int getHp() {
 		return hp;
