@@ -35,6 +35,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+import com.badlogic.gdx.utils.viewport.StretchViewport;
+
 import jangkoo.game.assets.Assets;
 import jangkoo.game.assets.Settings;
 import jangkoo.game.control.Controller;
@@ -92,8 +94,8 @@ public class Renderer {
 				controller = new Controller(shadowfiend);
 				tiledMapRenderer = new OrthogonalTiledMapRenderer(controller.tiledMap);
 				lights = new Environment();
-				//stage = new Stage(new StretchViewport(890,500));
-				stage = new Stage();
+				stage = new Stage(new StretchViewport(890,500));
+				//stage = new Stage();
 				Gdx.input.setInputProcessor(stage);
 				lights.add(new DirectionalLight().set(Color.WHITE, new Vector3(-1, -0.5f, 0).nor()));
 				//modelBatch = new ModelBatch();
@@ -270,7 +272,7 @@ public class Renderer {
 				}
 			}
 			spriteBatch.setProjectionMatrix(controller.uiCamera.combined);
-			spriteBatch.draw(Assets.avatarAn.getKeyFrame(controller.sfStateTime),10,10,100*Settings.SCALE_WIDTH,100*Settings.SCALE_HEIGHT);
+			spriteBatch.draw(Assets.avatarAn.getKeyFrame(controller.sfStateTime),10,10,100,100);
 			spriteBatch.setProjectionMatrix(controller.camera.combined);
 			if(controller.justDied!= null) {
 				Utils.coinEffects(spriteBatch, (int)controller.justDied.v2Position.x,(int) controller.justDied.v2Position.y, delta);
@@ -301,7 +303,7 @@ public class Renderer {
 				for(Tower tower:controller.towers)
 				{
 					spriteBatch.draw(Assets.towerAn.getKeyFrame(controller.sfStateTime),tower.v2Position.x,tower.v2Position.y,
-							71*Settings.SCALE_WIDTH, 140*Settings.SCALE_HEIGHT);
+							71, 140);
 					Assets.smallfont.draw(spriteBatch,tower.hp+"",(float)tower.v2Position.x + 20,(float)tower.v2Position.y + 141*Settings.SCALE_HEIGHT);
 				}
 			
@@ -321,13 +323,13 @@ public class Renderer {
 			if(controller.gameState == GameState.Pause)
 				spriteBatch.draw(Assets.levelupTexture,Settings.CAMERA_WIDTH/2 - 120,Gdx.graphics.getHeight()/2);
 			if(controller.click.aliveTime <Raze.RAZE_LIVE_TIME)
-				spriteBatch.draw(Assets.clickTt,controller.click.v2Position.x-10*Settings.SCALE_WIDTH,controller.click.v2Position.y-10*Settings.SCALE_HEIGHT,30*Settings.SCALE_WIDTH,30*Settings.SCALE_HEIGHT);
+				spriteBatch.draw(Assets.clickTt,controller.click.v2Position.x-10,controller.click.v2Position.y-10,30,30);
 			souls.setText("SOULS  "+ ShadowFiendGame.score);
 			hp.setText("HP  "+controller.shadowfiend.getHp());
 			gold.setText("GOLD  "+Settings.gold);
 			dmg.setText("DAMAGE "+controller.shadowfiend.baseDamage + " + " + controller.shadowfiend.getDamage());
 			Assets.bigTitleFont.draw(spriteBatch,randomQuote[controller.shadowfiend.getDamage()%randomQuote.length],
-					100*Settings.SCALE_WIDTH + 3*Settings.BUTTON_HEIGHT + 20,30);
+					100 + 3 + 20,30);
 			Assets.smallfont.draw(spriteBatch, "LEVEL" + Settings.level, Settings.CAMERA_WIDTH - 200, Settings.CAMERA_HEIGHT -10);
 			
 			spriteBatch.end();
