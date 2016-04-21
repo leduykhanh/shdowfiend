@@ -7,7 +7,7 @@ android {
             storePassword '123456'
         }
     }
-    buildToolsVersion "21.0.1"
+    buildToolsVersion "22.0.1"
     compileSdkVersion 21
     defaultConfig {
         minSdkVersion 9
