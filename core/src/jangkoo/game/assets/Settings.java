@@ -17,14 +17,16 @@ public class Settings {
 	public static int rank = 3000;
 	public static int level = 1;
 	public static int startLevel = 1;
-	public static int CAMERA_WIDTH = Gdx.graphics.getWidth();
-	public static int CAMERA_HEIGHT = Gdx.graphics.getHeight();
+	public static int DEVICE_WIDTH = Gdx.graphics.getWidth();
+	public static int DEVICE_HEIGHT = Gdx.graphics.getHeight();	
+	public static int CAMERA_WIDTH = 890;
+	public static int CAMERA_HEIGHT = 500;
 	public static int BUTTON_HEIGHT = 75;
 	public static int BUTTON_WIDTH = 75;
 	public static int MAX_MAP_WIDTH = 4*CAMERA_WIDTH;
 	public static float UNIT_DISTANCE = (float) (Math.sqrt(CAMERA_WIDTH*CAMERA_WIDTH + CAMERA_HEIGHT*CAMERA_HEIGHT)/100);
-	public static float SCALE_WIDTH = CAMERA_WIDTH/890f;
-	public static float SCALE_HEIGHT = CAMERA_HEIGHT/500f;
+	public static float SCALE_WIDTH = (float)CAMERA_WIDTH/DEVICE_WIDTH;
+	public static float SCALE_HEIGHT = (float)CAMERA_HEIGHT/DEVICE_HEIGHT;
 	public final static String file = ".shadowfiend";
 	public static void playCoin(){
 		if (soundOn) Assets.coin.play();

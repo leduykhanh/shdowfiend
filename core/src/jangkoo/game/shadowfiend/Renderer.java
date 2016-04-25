@@ -47,7 +47,7 @@ import jangkoo.game.control.Controller.RazeColor;
 public class Renderer {
 		/** sprite batch to draw text **/
 		private SpriteBatch spriteBatch;
-		ShapeRenderer sr;
+		ShapeRenderer sr,sfSR;
 		/** the background texture **/
 		TextButtonStyle textButtonStyle;
 	    TextButton raze1,raze2,raze3,blink,next,radiance,heart,quitButton;
@@ -100,7 +100,8 @@ public class Renderer {
 				lights.add(new DirectionalLight().set(Color.WHITE, new Vector3(-1, -0.5f, 0).nor()));
 				//modelBatch = new ModelBatch();
 				spriteBatch = new SpriteBatch();
-				sr = new ShapeRenderer();	
+				sr = new ShapeRenderer();
+				sfSR = new ShapeRenderer();
 				infoTable = new Table(Assets.skin1);
 				infoTable.top().left();
 				infoTable.setFillParent(true);
@@ -249,9 +250,12 @@ public class Renderer {
 				sprite = new Sprite(Assets.movingSfAn.getKeyFrame(controller.sfStateTime));
 			else 
 				sprite = new Sprite(Assets.staySfAn.getKeyFrame(controller.sfStateTime));
-			//sprite.setSize(71*Settings.SCALE_WIDTH,80*Settings.SCALE_HEIGHT);
+			sfSR.begin(ShapeType.Line);
+			sfSR.setProjectionMatrix(controller.camera.combined);
+			sfSR.setColor(new Color(0,0,1,0));
+			sfSR.circle(controller.shadowfiend.boundingCircle.x - 30, controller.shadowfiend.boundingCircle.y - 30, controller.shadowfiend.boundingCircle.radius);
+			sfSR.end();
 			sprite.setRotation((float) (controller.shadowfiend.getAngle()));
-//			sprite.setPosition((float)controller.shadowfiend.v2Position.x -40*Settings.SCALE_WIDTH , (float)controller.shadowfiend.v2Position.y -40*Settings.SCALE_HEIGHT);
 			sprite.setPosition((float)controller.shadowfiend.v2Position.x -80 , (float)controller.shadowfiend.v2Position.y -70);
 			spriteBatch.begin();
 			Utils.sfEffects(spriteBatch,(int)controller.shadowfiend.v2Position.x + 10, 
@@ -323,13 +327,16 @@ public class Renderer {
 			if(controller.gameState == GameState.Pause)
 				spriteBatch.draw(Assets.levelupTexture,Settings.CAMERA_WIDTH/2 - 120,Gdx.graphics.getHeight()/2);
 			if(controller.click.aliveTime <Raze.RAZE_LIVE_TIME)
+				{
 				spriteBatch.draw(Assets.clickTt,controller.click.v2Position.x-10,controller.click.v2Position.y-10,30,30);
+				//System.out.println(controller.click.v2Position.x);
+				}
 			souls.setText("SOULS  "+ ShadowFiendGame.score);
 			hp.setText("HP  "+controller.shadowfiend.getHp());
 			gold.setText("GOLD  "+Settings.gold);
 			dmg.setText("DAMAGE "+controller.shadowfiend.baseDamage + " + " + controller.shadowfiend.getDamage());
 			Assets.bigTitleFont.draw(spriteBatch,randomQuote[controller.shadowfiend.getDamage()%randomQuote.length],
-					100 + 3 + 20,30);
+					300 + 3 + 20,30);
 			Assets.smallfont.draw(spriteBatch, "LEVEL" + Settings.level, Settings.CAMERA_WIDTH - 200, Settings.CAMERA_HEIGHT -10);
 			
 			spriteBatch.end();
@@ -347,10 +354,11 @@ public class Renderer {
 //			spriteBatch.begin();
 //			spriteBatch.draw(Assets.creepBackgroundTexture, 0, 2*Settings.BUTTON_HEIGHT/3, Settings.MAX_MAP_WIDTH, Settings.CAMERA_HEIGHT - 2*Settings.BUTTON_HEIGHT/3, 0, 0, Settings.MAX_MAP_WIDTH, Assets.creepBackgroundTexture.getHeight(), false, false);
 //			spriteBatch.end();
+			Gdx.gl.glLineWidth(32);
+			sr.setProjectionMatrix(controller.uiCamera.combined);
 			sr.begin(ShapeType.Line);
 			sr.setColor(new Color(0,0,1,0));
-			sr.rect(Settings.BUTTON_HEIGHT, 2*Settings.BUTTON_HEIGHT/3, Settings.CAMERA_WIDTH - Settings.BUTTON_HEIGHT -1, Gdx.graphics.getHeight() - 2*Settings.BUTTON_HEIGHT/3 -1);
-			sr.circle(controller.shadowfiend.boundingCircle.x, controller.shadowfiend.boundingCircle.y, controller.shadowfiend.boundingCircle.radius);
+			sr.rect(Settings.BUTTON_HEIGHT, 2*Settings.BUTTON_HEIGHT/3, Settings.CAMERA_WIDTH - Settings.BUTTON_HEIGHT -1, Settings.CAMERA_HEIGHT - 2*Settings.BUTTON_HEIGHT/3 -1);
 			sr.end();
 			sr.begin(ShapeType.Filled);
 			sr.setColor(new Color(0,0,0,0));

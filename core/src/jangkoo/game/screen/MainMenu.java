@@ -17,6 +17,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+import com.badlogic.gdx.utils.viewport.StretchViewport;
 
 public class MainMenu  extends SFScreen{
 	Stage stage;
@@ -33,7 +34,7 @@ public class MainMenu  extends SFScreen{
 	public static final int HIGHEST_TOTAL= 0;
 	
     public MainMenu (final LeaderBoard leaderBoard) {
-    	stage = new Stage();
+    	stage = new Stage(new StretchViewport(890,500));
         Gdx.input.setInputProcessor(stage);
         font = new BitmapFont();
         gameName = new Label("Shadow Fiend Fight",Assets.skin1);
@@ -198,9 +199,9 @@ public class MainMenu  extends SFScreen{
 		
 		spriteBatch.begin();
 		//font.setScale(4f);
-		spriteBatch.draw(Assets.mainMenuBackgroundTexture, 0, 0, Settings.CAMERA_WIDTH, Settings.CAMERA_HEIGHT);
+		spriteBatch.draw(Assets.mainMenuBackgroundTexture, 0, 0, Settings.DEVICE_WIDTH, Settings.DEVICE_HEIGHT);
 		//font.setScale(1f);
-		font.draw(spriteBatch, "@Copyright Jangkoo", Settings.CAMERA_WIDTH/2 - 200, 50);
+		font.draw(spriteBatch, "@Copyright Jangkoo", Settings.DEVICE_WIDTH/2 - 200, 50);
 		spriteBatch.end();
 		stage.draw();
 	}

@@ -25,12 +25,13 @@ public class GameLoop extends SFScreen{
 		
 		if (Gdx.input.isTouched() || Gdx.input.isKeyPressed(Keys.SPACE)) 
 		{   
+			
 
-			int x = (int) (Gdx.input.getX()/Settings.SCALE_WIDTH);
-			int y = (int) ((Settings.CAMERA_HEIGHT - Gdx.input.getY())/Settings.SCALE_HEIGHT);
+			int x = (int) (Gdx.input.getX()*Settings.SCALE_WIDTH);			
+			int y = (int) ((Settings.DEVICE_HEIGHT - Gdx.input.getY())*Settings.SCALE_HEIGHT);			
 //			int y =  Gdx.input.getY();
-			int trueX = (int) ((x + controller.camera.position.x -Settings.CAMERA_WIDTH/2f)/Settings.SCALE_WIDTH);
-
+//			int trueX = (int) ((x + controller.camera.position.x -Settings.CAMERA_WIDTH/2f));
+			int trueX = (int) ((x + controller.camera.position.x -Settings.CAMERA_WIDTH/2f));
 			hited = false;
 			if(x>Settings.BUTTON_HEIGHT && x < Settings.CAMERA_WIDTH -4*Settings.BUTTON_HEIGHT/5 
 					&& y > 2*Settings.BUTTON_HEIGHT/3){

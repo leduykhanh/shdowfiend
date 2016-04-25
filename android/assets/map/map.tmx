@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="16" tilewidth="32" tileheight="32" nextobjectid="37">
- <tileset firstgid="1" name="brick" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="brick" tilewidth="32" tileheight="32" tilecount="16">
   <image source="gach1.png" width="148" height="144"/>
  </tileset>
- <tileset firstgid="17" name="grass" tilewidth="32" tileheight="32">
+ <tileset firstgid="17" name="grass" tilewidth="32" tileheight="32" tilecount="40">
   <image source="grass.jpg" width="273" height="185"/>
  </tileset>
- <tileset firstgid="57" name="tree" tilewidth="32" tileheight="32">
+ <tileset firstgid="57" name="tree" tilewidth="32" tileheight="32" tilecount="1">
   <image source="tree.png" width="32" height="32"/>
  </tileset>
  <layer name="BG" width="50" height="16">
   <data encoding="base64" compression="zlib">
-   eJwTZGBgEBzFo3gUjygsggWjyw+0G8nFwoPADaN4FA8kFiaAB9p9xGJs5RQ+jKxvoN0+ikfxKMaPARdiNWw=
+   eJwTZGBgEBzFoxiKmQeBG0b9Qnt/iGDB6PLUdje94kN4CMbHQOBRfwwuTE1/CBPAtPYHtfyCrZzCh5H1DbY4GcWjeBSjYgCkDzTE
   </data>
  </layer>
  <layer name="bounder" width="50" height="16">

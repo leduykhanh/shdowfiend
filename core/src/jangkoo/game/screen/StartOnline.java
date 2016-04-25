@@ -14,6 +14,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+import com.badlogic.gdx.utils.viewport.StretchViewport;
+
 import appwarp.WarpController;
 import appwarp.WarpListener;
 
@@ -31,7 +33,7 @@ public class StartOnline extends SFScreen implements  WarpListener {
 	public static final int BUTTON_HEIGHT = Settings.CAMERA_HEIGHT/7;
 	public StartOnline(final LeaderBoard leaderBoard){
 		spriteBatch = new SpriteBatch();
-		stage = new Stage();
+		stage = new Stage(new StretchViewport(890,500));
         Gdx.input.setInputProcessor(stage);
         centerTable = new Table();
         bottomRightTable = new Table();

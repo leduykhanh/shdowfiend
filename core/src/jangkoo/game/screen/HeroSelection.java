@@ -15,6 +15,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton.TextButtonStyle;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
+import com.badlogic.gdx.utils.viewport.StretchViewport;
 
 public class HeroSelection  extends SFScreen{
 	Stage stage;
@@ -30,7 +31,7 @@ public class HeroSelection  extends SFScreen{
 	public static final int HIGHEST_TOTAL= 0;
 	public static final int BUTTON_HEIGHT = Settings.CAMERA_HEIGHT/7;
     public HeroSelection (final LeaderBoard leaderBoard) {
-    	stage = new Stage();
+    	stage = new Stage(new StretchViewport(890,500));
         Gdx.input.setInputProcessor(stage);
         font = new BitmapFont();
         gameName = new Label("Pick hero for AI",Assets.skin1);

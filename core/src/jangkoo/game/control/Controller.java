@@ -93,7 +93,7 @@ public class Controller implements Disposable {
 
 //		camera= new OrthographicCamera(Settings.CAMERA_WIDTH, Settings.CAMERA_HEIGHT);
 		camera= new OrthographicCamera();
-		camera.setToOrtho(false, 890, 500);
+		camera.setToOrtho(false,Settings.CAMERA_WIDTH, Settings.CAMERA_HEIGHT);
 		uiCamera =new OrthographicCamera(Settings.CAMERA_WIDTH, Settings.CAMERA_HEIGHT);
 		camera.position.set(camera.viewportWidth / 2f, camera.viewportHeight / 2f, 0);
 		uiCamera.position.set(camera.viewportWidth / 2f, camera.viewportHeight / 2f, 0);

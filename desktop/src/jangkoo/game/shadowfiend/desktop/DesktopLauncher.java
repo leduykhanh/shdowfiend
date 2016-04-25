@@ -13,8 +13,8 @@ import jangkoo.game.shadowfiend.ShadowFiendGame;
 public class DesktopLauncher implements LeaderBoard {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.width = 890;
-		config.height = 500;
+		config.width = 1850;
+		config.height = 1000;
 		ShadowFiend shadowfiend = new ShadowFiend(300,300,1,new ArrayList <Item>());
 		new LwjglApplication(new ShadowFiendGame(new DesktopLauncher(),shadowfiend), config);
 	}
